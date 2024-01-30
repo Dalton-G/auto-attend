@@ -10,8 +10,8 @@ Auto Attend is an automated attendance system that uses facial recognition to ef
 - Easy to use interface
 
 ## Screenshots
-![test1](https://github.com/Dalton-G/Learnifly/blob/main/Test/test1.png?raw=true)
-![test2](https://github.com/Dalton-G/Learnifly/blob/main/Test/test2.png?raw=true)
+![test1](https://github.com/Dalton-G/auto-attend/blob/main/Test/test1.png?raw=true)
+![test2](https://github.com/Dalton-G/auto-attend/blob/main/Test/test2.png?raw=true)
 
 
 ## Project Dependencies
