@@ -78,7 +78,7 @@ while True:
                 datetimeObject = datetime.strptime(studentInfo['last_attendance_taken'], '%Y-%m-%d %H:%M:%S')
                 timeInSecsElapsed = (datetime.now() - datetimeObject).total_seconds()
 
-                if timeInSecsElapsed > 30:
+                if timeInSecsElapsed > 3600:
                     ref = db.reference(f'Students/{id}')
                     studentInfo['total_attendance'] += 1
                     ref.child('total_attendance').set(studentInfo['total_attendance'])
@@ -103,11 +103,11 @@ while True:
                     cv2.putText(backgroundImg, str(id), (1006, 493),
                                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
                     cv2.putText(backgroundImg, str(studentInfo['grades']), (910, 625),
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (100, 100, 100), 1)
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
                     cv2.putText(backgroundImg, str(studentInfo['year']), (1025, 625),
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (100, 100, 100), 1)
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
                     cv2.putText(backgroundImg, str(studentInfo['starting_year']), (1125, 625),
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (100, 100, 100), 1)
+                                cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1)
                     (width, height), _ = cv2.getTextSize(str(studentInfo['name']), cv2.FONT_HERSHEY_SIMPLEX, 1, 1)
                     center_offset = (414 - width) // 2
                     cv2.putText(backgroundImg, str(studentInfo['name']), (808 + center_offset, 445),
